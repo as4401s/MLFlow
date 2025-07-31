@@ -2,7 +2,7 @@
 
 # Housing Price Prediction with ML Experiment Tracking using MLflow
 
-This project demonstrates a machine learning workflow for predicting housing prices using various regression models. A key focus of this repository is to showcase the use of **MLflow** for robust experiment tracking, model management, and results comparison.
+This project demonstrates a machine learning workflow for predicting housing prices using various regression models. A key focus of this repository is to showcase the use of **MLflow** for robust experiment tracking, model management, and results comparison. It's important to note that the models have not been hyperparameter-tuned for optimal performance; the primary goal is to demonstrate the capabilities of MLflow.
 
 We explore three different regression models to solve this problem:
 1.  **Linear Regression**
@@ -31,47 +31,16 @@ The true power of MLflow is visualized in its UI. After running our experiments,
 
 All the models we train are logged and versioned in one central place. This makes it easy to see which models have been trained, when they were created, and which experiment run they belong to.
 
-![MLflow Models View](https://i.imgur.com/8FzWJtq.png)
+![MLflow Models View](images/Screenshot%20from%202025-07-31%2017-43-49.png)
 
 ### Comparing Performance Metrics
 
 MLflow provides powerful visualization tools to compare the performance of different models. We can easily plot key metrics like `r2_score`, `mae`, `mse`, and `rmse` across all our runs to identify the best-performing model at a glance.
 
-![MLflow Metrics Comparison](https://i.imgur.com/k6lWqV2.png)
+![MLflow Metrics Comparison](images/Screenshot%20from%202025-07-31%2017-44-13.png)
 
 ### Tracking Hyperparameters
 
 Reproducibility is critical. MLflow automatically logs all the hyperparameters for each run. If we discover that a particular model performed well, we can always go back and see the exact configuration that produced it. This eliminates guesswork and makes our results verifiable.
 
-![MLflow Parameters View](https://i.imgur.com/00A9S7L.png)
-
-## How to Run This Project
-
-1.  **Clone the repository:**
-    ```bash
-    git clone [https://github.com/as4401s/MLFlow.git](https://github.com/as4401s/MLFlow.git)
-    cd MLFlow
-    ```
-
-2.  **Install the required libraries:**
-    ```bash
-    pip install -r requirements.txt
-    ```
-    *(Note: You may need to create a `requirements.txt` file with pandas, scikit-learn, matplotlib, mlflow, and xgboost)*
-
-3.  **Start the MLflow UI:**
-    Open a terminal and run the following command. This will start a local tracking server.
-    ```bash
-    mlflow ui
-    ```
-    You can then access the UI by navigating to `http://127.0.0.1:5000` in your web browser.
-
-4.  **Run the experiment scripts:**
-    Open another terminal and run any of the Python scripts to train a model and log the results to MLflow.
-    ```bash
-    python linear_regression_with_mlflow.py
-    python random_forest_with_mlflow.py
-    python xgboost_with_mlflow.py
-    ```
-
-After running the scripts, refresh the MLflow UI in your browser to see the new runs, parameters, metrics, and models.
+![MLflow Parameters View](images/Screenshot%20from%202025-07-31%2017-45-20.png)
